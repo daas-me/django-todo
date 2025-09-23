@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📝 My Todo List</h1>
+
+            <!-- Input row -->
+            <div class="input-group">
+                <input type="text" id="todoInput" placeholder="Enter a new task...">
+                <button id="addBtn">Add</button>
+            </div>
+
+            <!-- Date row -->
+            <div class="date-group">
+                <input type="date" id="todoDate">
+            </div>
+        </header>
+
+        <main>
+            <!-- Empty state message -->
+            <p id="emptyMessage">No tasks are added yet</p>
+
+            <!-- Task list -->
+            <ul id="todoList"></ul>
+        </main>
+    </div>
+
+    <footer>
+            <p class="credits">
+                This To-Do List project is pieced together by Dwight Angelo A. Sabandal 
+                for CSIT327-Information Management 2 requirements.
+            </p>
+        </footer>
+
+    <script src="{% static 'js/todo.js' %}"></script>
+    
+</body>
+</html>
